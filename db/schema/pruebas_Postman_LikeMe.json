@@ -1,0 +1,42 @@
+
+{
+  "info": {
+    "name": "Like Me API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Obtener Posts",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/posts"
+      }
+    },
+    {
+      "name": "Crear Post",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Post prueba\",\n  \"url\": \"https://imagen.com/1.jpg\",\n  \"descripcion\": \"Descripción de prueba\"\n}"
+        },
+        "url": "http://localhost:3000/posts"
+      }
+    },
+    {
+      "name": "Like Post",
+      "request": {
+        "method": "PUT",
+        "url": "http://localhost:3000/posts/like/1"
+      }
+    },
+    {
+      "name": "Eliminar Post",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3000/posts/1"
+      }
+    }
+  ]
+}
